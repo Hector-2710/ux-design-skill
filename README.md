@@ -2,6 +2,60 @@
 
 **Use this skill when you want to design a new product, app, site, or feature; redesign, audit, or improve an existing experience; plan UX strategy, scope, structure, skeleton, or surface; or compare your implemented code against UX plans to produce a consolidated issues list (`ux/issues.md`).**
 
+## Install
+
+This is an [Agent Skill](https://agentskills.io): a public GitHub repo with `SKILL.md` at the root. Install it with the [skills CLI](https://skills.sh/docs/cli). It does not appear on [skills.sh](https://skills.sh) until people actually run `npx skills add` (the directory is install telemetry, not a submission form).
+
+### OpenCode (primary)
+
+From the project where you want the skill, or with `-g` for every project:
+
+```bash
+npx skills add Hector-2710/ux-design-skill -g -a opencode
+```
+
+Omit `-g` to install only in the current repo (typically `.agents/skills/` or `.opencode/skills/`).
+
+**Manual (OpenCode):** copy this repository into a folder named `ux-design-skill` (must match the skill `name`):
+
+| Scope | Path |
+| --- | --- |
+| Global | `~/.config/opencode/skills/ux-design-skill/` |
+| Project | `.opencode/skills/ux-design-skill/` |
+
+OpenCode also discovers `.agents/skills/` and `.claude/skills/` (project and `~/`). After install, start a new session and ask to design or redesign a product; the agent loads `ux-design-skill` via the `skill` tool.
+
+### Other agents (Cursor, Claude Code, Codex, Copilot, …)
+
+The CLI detects installed agents. Target several at once:
+
+```bash
+npx skills add Hector-2710/ux-design-skill -g -a opencode -a cursor -a claude-code -a copilot -a codex
+```
+
+Or drop `-a` and pick agents in the prompt:
+
+```bash
+npx skills add Hector-2710/ux-design-skill -g
+```
+
+Check that the repo resolves before installing:
+
+```bash
+npx skills add Hector-2710/ux-design-skill --list
+```
+
+**Manual copy** if you skip the CLI — folder name must be `ux-design-skill` and must contain `SKILL.md`, `references/`, and `templates/`:
+
+| Agent | Global | Project |
+| --- | --- | --- |
+| OpenCode | `~/.config/opencode/skills/` | `.opencode/skills/` |
+| Cursor | `~/.cursor/skills/` | `.cursor/skills/` |
+| Claude Code | `~/.claude/skills/` | `.claude/skills/` |
+| Compatible agents | `~/.agents/skills/` | `.agents/skills/` |
+
+In Cursor, invoke with `/ux-design-skill` or ask to design/redesign a product.
+
 ## What the skill does
 
 An interactive, plane-by-plane UX **design/redesign coach** grounded in Jesse James Garrett's *The Elements of User Experience* (the 5-planes model). Instead of one-shot advice, the agent runs you through the five planes — **strategy → scope → structure → skeleton → surface** — asking 3–6 prioritized questions per plane, recording your answers into per-plane documents, verifying each decision with "Why did you do it that way?", applying book-grounded gate checks, and writing each document before the next plane begins.
