@@ -1,0 +1,9 @@
+# Local tooling / dependencies
+.opencode/
+node_modules/
+
+# Source book (copyrighted; not part of the skill surface)
+*.pdf
+
+#Docs
+/docs
