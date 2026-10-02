@@ -4,7 +4,7 @@
 
 **Plane's new question (AC-008g):** **"What form?"** (p. 108). *How do we know that?* "The skeleton plane… defines the form the product will take" (p. 108): the "concrete components that will make the product easy to use," including interface elements, navigation, and information design, "defined down to the level of the wireframe" (p. 111).
 
-**Required artifacts:** `ux/skeleton.md` per `templates/skeleton.md` — interface design (3A), navigation + information design (3B), standard screens/wireframes + conventions vs deviations (3C).
+**Required artifacts:** `ux/skeleton.md` per `templates/skeleton.md` — §3A **Interface Design** (per-screen elements, arrangement, defaults, trade-offs), §3B **Navigation Design & Information Design** (systems table + wayfinding + grouping), §3C **Standard Screens & Wireframes** (screens list + per-screen text wireframe blocks + conventions ledger).
 
 **Book grounding:** Jesse James Garrett, *The Elements of User Experience* 2nd ed., **Chapter 6** (p. 108-130). Page anchors: form question (p. 108); interface design — "the arrangement of interface elements" including defaults (p. 114-118); navigation systems — global/local/supplementary/contextual/courtesy, "wayfinding" (p. 118-123, 127); information design — grouping/presentation of content (p. 124-127); **standard screens** + wireframes (p. 128-130).
 
@@ -30,35 +30,35 @@ What "done" looks like on this plane (quoted):
 - **Why this?** The skeleton "defines the concrete components that will let the user accomplish their tasks" — the button, slider, text field set that makes the flow *usable* (p. 114-118). Defaults tie effort to likelihood: "the user's most likely action should require the least effort" (p. 117-118).
 - **New-mode:** "We're new — layer out the elements for our main screens."
 - **Redesign-mode:** "What elements does the current product use today, and which arrangements work against the skeleton we want?"
-- **Feeds:** template §3A (interface design).
+- **Feeds:** template §3A **Interface Design** (per-screen table).
 
 ### CORE-2 — Navigation & wayfinding
 - **Phrasing:** "How do users move through the product — and do they always know where they are?"
 - **Why this?** "Navigation… lets users move from one part of the product to another" (p. 118); systems include global, local, supplementary, contextual, and courtesy navigation (p. 120-123) — and **wayfinding** "lets users know where they are and how to get where they want to go" (p. 127).
 - **New-mode:** "We're new — what are our navigation systems, and how will users always place themselves?"
 - **Redesign-mode:** "What navigation exists today, and where do users currently get lost?"
-- **Feeds:** template §3B (navigation + wayfinding).
+- **Feeds:** template §3B **Navigation Design & Information Design** (navigation systems table + wayfinding cues).
 
 ### CORE-3 — Information design
 - **Phrasing:** "How is content grouped and presented on each screen so users can read it efficiently?"
 - **Why this?** Information design is "the presentation of information" — grouping, ordering, and emphasis — so "users can quickly and accurately understand what they're looking at" (p. 124-127). It's the information side of skeleton; it cannot be blank (AC-010h).
 - **New-mode:** "We're new — how do we arrange content so the important things are obvious?"
 - **Redesign-mode:** "How is information currently presented — and which groupings hide or mislead?"
-- **Feeds:** template §3B (information design).
+- **Feeds:** template §3B **Navigation Design & Information Design** (information-design grouping table).
 
 ### CORE-4 — Standard screens & wireframes
 - **Phrasing:** "What set of standard screens emerges — and what does each look like at wireframe level?"
 - **Why this?** "A relatively small number of standard screens will emerge" that "cover the vast majority of what users will do" (p. 128); wireframes show "the overall structure" so we can test arrangement before any visual styling (p. 130). This produces a testable form.
 - **New-mode:** "We're new — sketch the standard screens for our main tasks."
 - **Redesign-mode:** "What screens does the current product actually have, and which are convoluted or duplicated?"
-- **Feeds:** template §3C (standard screens / wireframes).
+- **Feeds:** template §3C **Standard Screens & Wireframes** (wireframe blocks).
 
 ### CORE-5 — Conventions vs deviations
 - **Phrasing:** "Where do we follow convention, and where do we deviate — deliberately?"
 - **Why this?** Consistency with familiar patterns reduces effort (wayfinding + interface, p. 117-118, 128); deliberate deviation is fine only when it buys a clear advantage. Deviations left unexamined become arbitrary.
 - **New-mode:** "We're new — which conventions will users already know, and where do we break them on purpose?"
 - **Redesign-mode:** "Which conventions does the current product follow by accident, and which should it adopt or break?"
-- **Feeds:** template §3C (conventions/deviations ledger).
+- **Feeds:** template §3C **Standard Screens & Wireframes** (conventions/deviations ledger).
 
 ---
 
@@ -94,9 +94,9 @@ _Anything skipped or substituted is recorded as an assumption in §5 of the temp
 
 Feeds template **§3** (duality enforced structurally — AC-010e):
 
-- **3A — FUNCTIONALITY side:** **Interface design** — elements, arrangement, defaults (p. 114-118).
-- **3B — INFORMATION side:** **Navigation systems + wayfinding** (p. 118-123, 127) and **information design** — grouping/presentation (p. 124-127). Never blank (AC-010h).
-- **3C — Cross-cutting:** **Standard screens + wireframes** (p. 128-130) and the **conventions/deviations ledger**.
+- **3A — Interface Design (FUNCTIONALITY side):** elements, arrangement, defaults (p. 114-118).
+- **3B — Navigation Design & Information Design (INFORMATION side):** the five navigation systems + wayfinding (p. 118-123, 127); grouping/presentation (p. 124-127). Never blank (AC-010h).
+- **3C — Standard Screens & Wireframes (Cross-cutting):** the plane's deliverable — wireframes over a small set of standard screens (p. 128-130) — plus the conventions/deviations ledger.
 
 ---
 
@@ -121,5 +121,5 @@ Per-plane minimums (FR-013b skeleton / AC-013b) — gate **Pass**/**Pass-with-ba
 - **Information design** grouping/presentation captured or flagged (p. 124-127).
 - **Standard screens / wireframes** sketched (p. 128-130).
 - **Conventions vs deliberate deviations** listed.
-- Every §3 decision has a non-empty "Why"; §1 never blank.
+- Template §1, §3A (Interface Design), §3B (Navigation & Information Design), §3C (Standard Screens & Wireframes), §5 all non-empty; every §3 decision has a non-empty "Why."
 - Sweep verdict = Pass or Pass-with-backlogs (never Blocked) — `references/verification-sweep.md`.

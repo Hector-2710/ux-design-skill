@@ -10,7 +10,9 @@
 
 ## Part 1 — Intake: mode = redesign
 
-**AGENT:** Hi — I'm your UX coach. We'll work five planes bottom-up — strategy, scope, structure, skeleton, surface — one per session by default, writing one doc per plane into a `ux/` folder as we finish. Which is your situation: **new product**, **redesign existing**, or **both** — an existing product being rebuilt so much it looks new?
+**AGENT:** Hi — I'm your UX coach, grounded in Garrett's *Elements of User Experience*. We'll work five planes bottom-up — **strategy → scope → structure → skeleton → surface** — building each plane on the one below. Each plane produces its own doc in a `ux/` folder carrying the book's artifacts for that plane; I'll ask 3–6 prioritized questions per plane, record your answers as decisions challenged with "Why did you do it that way?", and save each plane's doc at its gate. One plane per session by default — every gate a natural stopping point, resumable with nothing lost. Unknowns become flagged assumptions, never blockers; after surface we close with a cross-plane review and an optional code pass into `ux/issues.md`. Which is your situation: **new product**, **redesign existing**, or **both** — an existing product being rebuilt so much it looks new?
+
+@ *Session opener delivered first (mandatory — seven items: what the skill is, the five planes, how each plane runs, one-plane-per-session, outputs, assumptions-not-blockers, closing review), then straight into the mode probe. No design question before intake (AC-003).*
 
 **USER:** Redesign, definitely. BentoRow is our campus meal-ordering app — it works, but students say it's confusing and the bold Order button doesn't stand out.
 
@@ -108,15 +110,15 @@
 
 **AGENT:** Now the target — §3 decisions that answer each CORE question *after* the audit. Feed these back to me as decisions, not opinions:
 
-- **3A (interface, CORE-1):** Vendor tiles keep photo + name + rating; the Order action becomes a **primary, always-visible** "Order" button with largest contrast; default action on a vendor card = "view menu," per "most likely action = least effort" (p. 117-118). Trade-off stated: less tile space for description, deliberately traded for action prominence.
-- **3B (navigation, CORE-2):** Keep the tab bar (deliberate convention); add **vendor-level wayfinding**: breadcrumb "Home > Granny's Bowl", back affordance, "you are here" on the active tab (p. 127).
-- **3B (information design, CORE-3):** Group per tile: identity → reason-to-pick → action. One emphasis rule: the action gets the strongest cue, not the rating.
-- **3C (standard screens, CORE-4):** Collapse to **three standard screens** — Home/Browse, Vendor detail, Order/Checkout — described at wireframe level in the doc (§3C), each ≤ the same skeleton.
-- **3C (conventions/deviations, CORE-5):** Follow: tab bar, card list. Deviate: order-button prominence (deliberate, stated reason: strategy says "decide quickly"; deviation buys the objective).
+- **§3A Interface Design (CORE-1):** Vendor tiles keep photo + name + rating; the Order action becomes a **primary, always-visible** "Order" button with largest contrast; default action on a vendor card = "view menu," per "most likely action = least effort" (p. 117-118). Trade-off stated: less tile space for description, deliberately traded for action prominence.
+- **§3B Navigation & Information Design (CORE-2):** Keep the tab bar (deliberate convention); add **vendor-level wayfinding**: breadcrumb "Home > Granny's Bowl", back affordance, "you are here" on the active tab (p. 127).
+- **§3B Navigation & Information Design (CORE-3):** Group per tile: identity → reason-to-pick → action. One emphasis rule: the action gets the strongest cue, not the rating.
+- **§3C Standard Screens & Wireframes (CORE-4):** Collapse to **three standard screens** — Home/Browse, Vendor detail, Order/Checkout — each sketched as a text wireframe block at wireframe level in the doc (§3C), each ≤ the same skeleton.
+- **§3C Standard Screens & Wireframes, conventions ledger (CORE-5):** Follow: tab bar, card list. Deviate: order-button prominence (deliberate, stated reason: strategy says "decide quickly"; deviation buys the objective).
 
 **USER:** Yes to all — and the orange header goes to the surface plane to be re-decided as the brand's accent color, not left as founder preference.
 
-**AGENT:** Recorded. §3's §3A and §3B are both non-empty and consistent — the FUNCTIONALITY (actions/arrangement) and INFORMATION (grouping/wayfinding) sides both have decisions with "Why" rows.
+**AGENT:** Recorded. §3A (**Interface Design**) and §3B (**Navigation & Information Design**) are both non-empty and consistent — the FUNCTIONALITY (actions/arrangement) and INFORMATION (grouping/wayfinding) sides both have decisions with "Why" rows.
 
 ---
 
@@ -128,7 +130,7 @@
 
 **USER:** No, none yet.
 
-**AGENT — substitute, built with the user:** Let's build the lightweight substitute together — instead of pixels, I'll record each standard screen as a **text-based element list** at wireframe level: per screen, the elements and their order/top/bottom placement. You sanity-check placement; I type the list into §3C. So Home/Browse: search top → category rail → vendor cards... does the Order button go bottom-right of each card?
+**AGENT — substitute, built with the user:** Let's build the lightweight substitute together — instead of pixels, I'll record each standard screen as a **text wireframe block** at wireframe level: per screen, the elements and their order/top/bottom placement. You sanity-check placement; I type the list into §3C (**Standard Screens & Wireframes**). So Home/Browse: search top → category rail → vendor cards... does the Order button go bottom-right of each card?
 
 **USER:** Bottom-right, yes — thumb reach.
 
@@ -142,7 +144,7 @@
 
 **AGENT:** `ux/skeleton.md` is drafted with the full current-state → issues → target shape and the wireframe-level text. Gate sweep, six checks.
 
-**AGENT — check 1, "Why did you do it that way?" (p. 157):** Take the §3A decision "Order button is the strongest cue on the tile." Why that way?
+**AGENT — check 1, "Why did you do it that way?" (p. 157):** Take the §3A (**Interface Design**) decision "Order button is the strongest cue on the tile." Why that way?
 
 **USER:** Because strategy said "decide quickly with confidence," and the current state proved the action was invisible. It traces to strategy, and to the issue evidence.
 
@@ -158,7 +160,7 @@
 
 **USER:** Structure's issue 5 fix — we're re-gating structure per its own flow fix, and skeleton #1 matches it. No contradiction remains.
 
-**AGENT:** Confirmed clear. Check 5 — duality: §3A and §3B both non-empty and consistent?
+**AGENT:** Confirmed clear. Check 5 — duality: §3A (**Interface Design**) and §3B (**Navigation & Information Design**) both non-empty and consistent?
 
 **USER:** Yes — actions on one side, wayfinding/grouping on the other, both feed the same standard screens.
 

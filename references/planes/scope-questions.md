@@ -4,7 +4,7 @@
 
 **Plane's new question (AC-008g):** **"What are we going to make?"** (p. 61). *How do we know that?* "On the scope plane we transform the strategy into the requirements of the product" (p. 57); the answer "tells us what we plan to build and what we plan not to build" (p. 59-60). *"What are we going to make — and what are we not going to make?"* (p. 60-61).
 
-**Required artifacts:** `ux/scope.md` per `templates/scope.md` — functional specifications (3A), content requirements incl. ownership and update cadence (3B), out-of-scope/backlog + prioritization + product-wide constraints (3C).
+**Required artifacts:** `ux/scope.md` per `templates/scope.md` — §3A **Functional Specifications** (written per the four rules, with priority), §3B **Content Requirements** (format/size/owner/update-frequency/audience + inventory), §3C **Prioritization, Out-of-Scope & Constraints** (must-have core + backlog list + constraints).
 
 **Book grounding:** Jesse James Garrett, *The Elements of User Experience* 2nd ed., **Chapter 4** (p. 57-77). Page anchors: the scope question (p. 60-61); functional specifications + the four writing rules (p. 62-71); content requirements + content inventory (p. 71-74); prioritization against "strategy and the feasibility of implementing" (p. 74-77); "what's out of scope" (p. 59-60); brand + technical constraints (p. 65). *"We should know what we're building and, just as important, what we're not building."* (p. 59-60)
 
@@ -32,42 +32,42 @@ What "done" looks like on this plane (quoted):
 - **Why this?** "Functional specifications define what the product will do for the user" (p. 62-63) — they are the foundation of scope ("the feature sets that describe the product we are building," p. 62). Written via the **four rules**: positive, specific, non-subjective, quantitative-where-possible (p. 70-71).
 - **New-mode:** "We're starting fresh — what should the product let users do, in your own words?"
 - **Redesign-mode:** "What does the current product do today — and which functions survive the redesign as-is, which change, which disappear?"
-- **Feeds:** template §3A (functional specifications); violations of the four rules get pushed back once, then flagged (AC-013c).
+- **Feeds:** template §3A **Functional Specifications** (requirements table); violations of the four rules get pushed back once, then flagged (AC-013c).
 
 ### CORE-2 — Content requirements
 - **Phrasing:** "What content will the product include — and what defines each content element?"
 - **Why this?** The information side of scope: "content requirements are the answers to questions about what content the product needs" (p. 71) — "content elements" defined by **size, format, ownership, currency, and relevance** (p. 74). Scope is only half-real if it lists features but not the content those features serve (duality AC-010e).
 - **New-mode:** "We're new — what content do users need, and what will it take to support it?"
 - **Redesign-mode:** "What content does the current product carry today, and which of it is required vs. baggage (content inventory, p. 74)?"
-- **Feeds:** template §3B (content requirements + inventory); uncontrolled items → flagged.
+- **Feeds:** template §3B **Content Requirements** (attributes table + inventory note); uncontrolled items → flagged.
 
 ### CORE-3 — Out of scope / backlog
 - **Phrasing:** "What are we explicitly *not* building — now, and ever?"
 - **Why this?** "As important as understanding what we're building is understanding what we're not building" (p. 59); out-of-scope items get pushed to the backlog "with a better chance… we'll be able to reconsider them" later (p. 60). A product that tries to be everything serves no strategy (strategy discipline, p. 44-45).
 - **New-mode:** "We're starting from scratch — what are we deliberately leaving out of the first version?"
 - **Redesign-mode:** "What does the current product do that we're intentionally stopping or cutting?"
-- **Feeds:** template §3C (out-of-scope + backlog row); never an empty list (AC-010h).
+- **Feeds:** template §3C **Out-of-scope / backlog table**; never an empty list (AC-010h).
 
 ### CORE-4 — Prioritization
 - **Phrasing:** "Of everything we could build — which do we build first, and why those?"
 - **Why this?** "Prioritizing requirements… means evaluating them against the strategy and against the feasibility of implementing them" (p. 74-77). A requirement that serves neither the strategy's objectives nor the user's needs "isn't going to help anybody" (p. 74-75).
 - **New-mode:** "We're new — what's the must-have core that proves the strategy, before anything optional?"
 - **Redesign-mode:** "Which existing feature does user feedback most demand we fix — and which do power users use most (proxy for priority)?"
-- **Feeds:** template §3A/§3B (priority column) + §3C (canonical scoring: strategy-tie + feasibility, p. 74-77).
+- **Feeds:** template §3A priority column + §3C **must-have core** (strategy-fit × feasibility, p. 74-77).
 
 ### CORE-5 — Product-wide constraints
 - **Phrasing:** "What constraints apply to *everything* we build — brand, technology, hardware?"
 - **Why this?** Scope is where "the [important] constraint decisions" get made: "brand identity" must stay "consistent with the strategy plane," and "technical" / "hardware" constraints bind every higher plane (p. 65). Constraints stated here prevent re-litigating them at skeleton/surface (AC-008f).
 - **New-mode:** "We're new — what technical/hardware platform or brand rules are fixed ahead of time?"
 - **Redesign-mode:** "What platform and brand constraints shaped the current product — and which are still binding?"
-- **Feeds:** template §3C (constraints list) → imported into structure/skeleton/surface gates.
+- **Feeds:** template §3C **Product-wide constraints table** → imported into structure/skeleton/surface gates.
 
 ### CORE-6 — Content ownership & update cadence
 - **Phrasing:** "Who owns each content element, and how often does it get updated?"
 - **Why this?** Content requirements must define "ownership, currency, and relevance" — "who is responsible for creating and maintaining" each element and "how often it will be updated" (p. 71, 74). Unowned content is the quiet failure of the information side (AC-010h).
 - **New-mode:** "We're new — who will own each piece of content going forward?"
 - **Redesign-mode:** "Who owns the current content, and is that cadence still working / still in one place?"
-- **Feeds:** template §3B (ownership + update-frequency columns); unknown owner → flagged assumption row.
+- **Feeds:** template §3B **Content Requirements** (owner + update-frequency columns); unknown owner → flagged assumption row.
 
 ---
 
@@ -101,9 +101,9 @@ Applies to this plane: **content inventory, feasibility research, requirement pr
 
 Feeds template **§3** (duality enforced by structure — AC-010e):
 
-- **3A — FUNCTIONALITY side:** **Functional specifications** — the feature set "defined as a positive, specific, non-subjective, and quantitative-where-possible list" (p. 62-71).
-- **3B — INFORMATION side:** **Content requirements** — content elements with size/format/ownership/currency/relevance (p. 71-74) + update cadence; never blank; degrades to a flagged assumption (AC-010h).
-- **3C — Cross-cutting:** **Out-of-scope/backlog** (p. 59-60) + **prioritization** (strategy-fit × feasibility, p. 74-77) + **product-wide constraints** (brand + technical, p. 65).
+- **3A — Functional Specifications (FUNCTIONALITY side):** the feature set, "defined as a positive, specific, non-subjective, and quantitative-where-possible list" (p. 62-71).
+- **3B — Content Requirements (INFORMATION side):** content elements with size/format/ownership/currency/audience (p. 71-74) + the content inventory (p. 74); never blank; degrades to a flagged assumption (AC-010h).
+- **3C — Prioritization, Out-of-Scope & Constraints (Cross-cutting):** the must-have core (p. 74-77), the explicit out-of-scope/backlog list (p. 59-60), and product-wide constraints (brand + technical, p. 65).
 
 ---
 
@@ -128,5 +128,5 @@ Per-plane minimums (FR-013b scope / AC-013b) — gate **Pass**/**Pass-with-backl
 - **Out-of-scope/backlog list** present (p. 59-60) — never empty.
 - **Prioritization** scored against **strategy + feasibility** (p. 74-77) — a must-have core is identifiable.
 - **Product-wide constraints** (brand + technical/hardware) captured or flagged (p. 65).
-- Template §1, §3A, §3B, §3C, §5 all non-empty; every §3 decision has a non-empty "Why."
+- Template §1, §3A (Functional Specifications), §3B (Content Requirements), §3C (Prioritization/Out-of-Scope/Constraints), §5 all non-empty; every §3 decision has a non-empty "Why."
 - Sweep verdict = Pass or Pass-with-backlogs (never Blocked) — `references/verification-sweep.md`.
