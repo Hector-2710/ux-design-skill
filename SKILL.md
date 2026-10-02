@@ -1,9 +1,9 @@
 ---
 name: ux-design-skill
-description: Interactive, plane-by-plane UX **design or redesign** coach grounded in Jesse James Garrett's *The Elements of User Experience*. Use when the user wants to design a new product, app, site, or feature; **redesign, audit, or improve** an existing experience; define UX strategy, scope, structure, skeleton, or surface; plan features, content, information architecture, navigation, UI/wireframes, or visual design; or compare implemented code against UX plans to produce a consolidated issues list (`ux/issues.md`). The agent asks 3–6 prioritized questions per plane, records decisions, writes one document per plane (strategy.md, scope.md, structure.md, skeleton.md, surface.md) into a `ux/` folder, and flags missing data as assumptions instead of blocking. Covers **both the functionality side** (tasks, features, tools) **and the information side** (content, meaning, architecture) of every plane, for new products and redesigns/audits alike.
+description: Interactive, plane-by-plane UX **design or redesign** coach grounded in Jesse James Garrett's *The Elements of User Experience*. Use when the user wants to design a new product, app, site, or feature; **redesign, audit, or improve** an existing experience; define UX strategy, scope, structure, skeleton, or surface; plan features, content, information architecture, navigation, UI/wireframes, or visual design; or compare implemented code against UX plans to produce a consolidated issues list (`ux/issues.md`). The session opens with a mandatory roadmap summary (what the skill will do, plane by plane). The agent asks 3–6 prioritized questions per plane, records decisions, writes one document per plane (strategy.md, scope.md, structure.md, skeleton.md, surface.md) into a `ux/` folder — each carrying the book's named artifacts for that plane (product objectives and user needs at strategy; functional specifications and content requirements at scope; the architecture diagram at structure; wireframes at skeleton; design comps and style guide at surface) — and flags missing data as assumptions instead of blocking. Covers **both the functionality side** (tasks, features, tools) **and the information side** (content, meaning, architecture) of every plane, for new products and redesigns/audits alike.
 license: MIT
 metadata:
-  version: 1.0.0
+  version: 1.1.0
   author: Hector Rosales
   tags:
     - ux
@@ -47,9 +47,15 @@ By default the skill writes into a `ux/` folder in the user's working directory 
 - `ux/strategy.md`, `ux/scope.md`, `ux/structure.md`, `ux/skeleton.md`, `ux/surface.md` — one document per plane, each written and saved **at its plane's gate, before the next plane begins**;
 - `ux/issues.md` — one consolidated issues list, generated last (section 15).
 
+Each plane doc carries the **book's named artifacts** for its plane, as its §3 section titles (§3A functionality / §3B information / §3C cross-cutting): `strategy.md` → **Product Objectives** (with conditions for success), **User Needs** (segments, persona blocks, research basis), **Brand Identity & Success Metrics**; `scope.md` → **Functional Specifications** (four writing rules), **Content Requirements** (attributes + inventory), **Prioritization, Out-of-Scope & Constraints**; `structure.md` → **Interaction Design** (conceptual model + error-handling ladder), **Information Architecture** (nodes, organizing principles, controlled vocabulary), **Architecture Diagram (text form) & Key Flows**; `skeleton.md` → **Interface Design** (elements, defaults), **Navigation Design & Information Design** (systems, wayfinding, grouping), **Standard Screens & Wireframes**; `surface.md` → **Visual Design** (eye path, contrast; readability), **Design Comps & Style Guide**. The full plane → artifact mapping lives in `references/book-cheatsheet.md` §1.5.
+
 Every doc mirrors its template in `templates/` — never invent a document shape. Writing is **incremental, plane by plane**: a doc is durable before any next-plane work starts, and it is never batch-written. The saved `ux/<plane>.md` files plus `session.md` are the **plan of record** — on resume these, not chat history, are the memory. Imported inputs are treated as **current state** to deepen, never re-derived, and the user's source files are never modified (imported per-plane into template §1 with provenance `Source: <X, v./date>`). Generated docs are **English**; if the user answers in another language, paraphrase their decisions into English in the docs and confirm once at the first gate (§2/§5).
 
 ## 3. The method in one screen
+
+![The Elements of User Experience — Jesse James Garrett (2nd ed.)](assets/theElements.png)
+
+*The book behind this method — every plane, artifact, and gate check below traces to it.*
 
 Five planes, built bottom-up:
 
@@ -66,7 +72,7 @@ Five planes, built bottom-up:
 
 ## 4. Mode detection (intake)
 
-Run `references/intake.md` **always — first, on every activation, before any design question**. Intake: detects mode — new product / redesign of existing / both (confirmed with the user, stored in `ux/session.md`, re-surfaced at every gate); detects a **starting plane** for mid-stream entry (section 12); imports existing inputs (PRD, spec, design system, mockups, analytics) for per-plane import; collects project fixtures; and writes the initial `ux/session.md`. **Do this BEFORE any questions.**
+Run `references/intake.md` **always — first, on every activation, before any design question**. Intake: **delivers the mandatory session opener first** (the roadmap summary — what this skill will do, plane by plane; the checklist lives in `references/intake.md` §1; skipping it is a contract violation, even if the user says "just ask me questions"); detects mode — new product / redesign of existing / both (confirmed with the user, stored in `ux/session.md`, re-surfaced at every gate); detects a **starting plane** for mid-stream entry (section 12); imports existing inputs (PRD, spec, design system, mockups, analytics) for per-plane import; collects project fixtures; and writes the initial `ux/session.md`. **Do this BEFORE any questions.**
 
 ## 5. Session contract
 
@@ -83,7 +89,7 @@ For every plane — in this order when starting at plane 1: **strategy → scope
 1. **Load** the plane's question bank (`references/planes/<plane>-questions.md`) and its template (`templates/<plane>.md`). Consult `references/00-INDEX.md` on activation to know what to load and what not to.
 2. **Import current state** into template §1 (existing inputs with provenance, or current-state extraction probes in redesign mode).
 3. **Ask 3–6 prioritized core questions** from the bank — batched, most-important-first.
-4. **Record answers** into the template copy (decisions in §3A/§3B/§3C).
+4. **Record answers** into the template copy (the plane's artifact sections §3A/§3B/§3C — e.g., persona blocks at strategy, four-rules requirements at scope, wireframe blocks at skeleton).
 5. **Apply the optional-step substitution ladder** where an optional item has no data (section 8).
 6. **Write the doc at the gate** — save `ux/<plane>.md` before any next-plane work begins.
 7. **Run the verification sweep** at the gate (section 10).
@@ -111,13 +117,13 @@ Optional ≠ skippable: the 3A/3B section always exists; only its content may de
 
 ## 9. Duality rule
 
-Every plane covers **BOTH the functionality side and the information side**, enforced structurally by the template (paired §3A/§3B sections, plus a §3C cross-cutting) and behaviorally by the gate's duality check. Never leave a side blank — a side with no data degrades to an assumption row, it does not disappear. Per-plane mapping:
+Every plane covers **BOTH the functionality side and the information side**, enforced structurally by the template (paired §3A/§3B sections, plus a §3C cross-cutting) and behaviorally by the gate's duality check. Never leave a side blank — a side with no data degrades to an assumption row, it does not disappear. Per-plane mapping (each section title names the book's artifact):
 
-- **Strategy:** 3A product objectives (goals, conditions for success); 3B user needs (segments, personas, research); 3C brand identity + success metrics.
-- **Scope:** 3A functional specifications; 3B content requirements (types, sizes, ownership, update frequency, audience); 3C prioritization + out-of-scope/backlog + product-wide constraints.
-- **Structure:** 3A interaction design (conceptual model, error-handling ladder); 3B information architecture (nodes, structure type, organizing principles, controlled vocabulary/metadata); 3C architecture/flow (text form).
-- **Skeleton:** 3A interface design (elements, arrangement, defaults, trade-offs); 3B navigation design (systems, wayfinding) + information design (grouping, error messages); 3C standard screens + wireframe-level arrangement.
-- **Surface:** 3A sensory design for functionality; 3B sensory design for information; 3C consistency, brand expression, eye-path/contrast/uniformity, color/type, style-guide + comp decisions.
+- **Strategy:** 3A **Product Objectives** (objectives + conditions for success); 3B **User Needs** (segments, personas, research basis); 3C **Brand Identity & Success Metrics**.
+- **Scope:** 3A **Functional Specifications** (four writing rules); 3B **Content Requirements** (format, size, ownership, update frequency, audience) + inventory; 3C **Prioritization, Out-of-Scope & Constraints**.
+- **Structure:** 3A **Interaction Design** (conceptual model, error-handling ladder); 3B **Information Architecture** (nodes, structure type, organizing principles, controlled vocabulary/metadata); 3C **Architecture Diagram (text form) & Key Flows**.
+- **Skeleton:** 3A **Interface Design** (elements, arrangement, defaults, trade-offs); 3B **Navigation Design & Information Design** (systems, wayfinding, grouping, error messages); 3C **Standard Screens & Wireframes** + conventions/deviations ledger.
+- **Surface:** 3A **Visual Design — functionality** (eye path, contrast & emphasis); 3B **Visual Design — information** (readability); 3C **Design Comps & Style Guide** (consistency, palette/type, comps, style guide).
 
 ## 10. Verification sweep at the gate
 
@@ -136,7 +142,7 @@ At every gate, run `references/verification-sweep.md` **once** — at the gate, 
 
 **Generic gate (every plane):** required template sections non-empty (§1, §3A, §3B, §3C, §5; §2 in redesign mode); every §3 decision row has a non-empty "Why"; the sweep verdict is **Pass or Pass-with-backlogs, never Blocked**; and there is no unresolved lower-plane contradiction (any forced lower-plane change is scheduled, executed, and re-gated).
 
-**Per-plane minimums:** see the `GATE` block of each plane's question bank for the book-grounded artifact minimums (e.g., strategy: conditions for success stated without pre-defining the path, user needs for at least the primary audience, metrics defined or flagged; scope: the four writing rules and an explicit out-of-scope list; and so on per plane).
+**Per-plane minimums:** see the `GATE` block of each plane's question bank for the book-grounded artifact minimums (e.g., strategy: product objectives with conditions for success stated without pre-defining the path, user needs for at least the primary audience, brand identity and metrics defined or flagged; scope: functional specifications written per the four rules and an explicit out-of-scope list; structure: a stated conceptual model and error-handling ladder; skeleton: standard screens sketched at wireframe level; surface: design comps and style-guide contents defined or flagged; and so on per plane).
 
 **Required question with no answer:** the agent pushes back **once** — explains why the plane matters ("strategy feeds every later plane; without it, later gates have nothing to trace to") — and only on a second "no" records a **critical flagged assumption** and proceeds. The flow never stalls.
 
