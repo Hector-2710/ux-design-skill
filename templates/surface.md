@@ -1,7 +1,9 @@
 # Surface — <Product>
 
 <!-- Copy this template to ux/surface.md and fill every section in place.
-     Never invent a doc shape: this template IS the structure (contract C-2). -->
+     Never invent a doc shape: this template IS the structure (contract C-2).
+     The book's deliverables for this plane: the design comp and the style
+     guide (p. 148-151). -->
 
 ## 0. Metadata
 
@@ -40,36 +42,68 @@ None known — starting from scratch
 |---|---|---|---|---|
 | 1 | <issue> | <Critical/High/Medium/Low> | <file:line / screenshot / URL> | <plane it belongs to> |
 
-## 3. Decisions — FUNCTIONALITY side (3A)
+## 3A. Visual Design — Functionality side
 
-<!-- Surface 3A = Sensory design for functionality (AC-010e): the look and feel
-     applied to the functional elements (controls, feedback, states) so that
-     functionality reads clearly. The 3A section always exists. -->
+<!-- Surface 3A = Sensory design for the functionality side (AC-010e): how
+     interactive elements look so actions read clearly. Eye path: "where
+     does the eye go first?" and the flow across the screen (p. 137-139).
+     Contrast draws the eye to what matters; uniformity keeps the rest
+     calm (p. 139-143). The 3A section always exists. -->
 
-| Decision | Why (trace to lower plane / convention / assumption) | Back-loop flag? |
-|---|---|---|
-| <sensory decision for a functional element> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
+**Eye path** (per key screen — first → then → then):
 
-## 3. Decisions — INFORMATION side (3B)
+| Key screen | Eye path (order of visual attention) | Why (trace to lower planes) | Back-loop flag? |
+|---|---|---|---|
+| <screen> | <first …, then …, then …> | <traces to skeleton/structure … / assumption A-N> | <yes/no> |
 
-<!-- Surface 3B = Sensory design for information (AC-010e): the look and feel
-     applied to content and meaning — how information is made visually
-     legible and ordered. The 3B section always exists. -->
+**Contrast & emphasis on functional elements** (controls, feedback, states — p. 139-143):
 
-| Decision | Why (trace to lower plane / convention / assumption) | Back-loop flag? |
-|---|---|---|
-| <sensory decision for information/content> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
+| Element | Contrast / emphasis decision | Why (trace) | Back-loop flag? |
+|---|---|---|---|
+| <control / state> | <how it stands out — or recedes> | <…> | <yes/no> |
 
-## 3. Decisions — Cross-cutting (3C)
+## 3B. Visual Design — Information side
 
-<!-- Surface 3C = Consistency, brand expression, eye-path / contrast /
-     uniformity, color / type, and the style guide + design comp decisions
-     (AC-010e). Record the internal and external consistency rules, the
-     palette and typography, and the style-guide / comp contents. -->
+<!-- Surface 3B = Sensory design for the information side (AC-010e): how
+     content is made visually legible and ordered — type sizes, hierarchy,
+     information emphasis (p. 145-148). Distinct styles only to indicate
+     actual differences in the information. Never blank (AC-010h). -->
 
-| Decision | Why (trace to lower plane / convention / assumption) | Back-loop flag? |
-|---|---|---|
-| <consistency rule / brand / eye-path / color / type / style-guide / comp> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
+| Content / information | Visual presentation decision | Why (trace) | Back-loop flag? |
+|---|---|---|---|
+| <content type> | <readability/legibility choice — sizes, hierarchy, emphasis> | <traces to … / assumption A-N> | <yes/no> |
+
+## 3C. Design Comps & Style Guide — Cross-cutting
+
+<!-- Surface 3C = the plane's two deliverables (AC-010e): the design comp
+     (p. 148) — the visual analog of the wireframe, with a one-to-one
+     mapping to wireframe components — and the style guide (p. 148-151),
+     the compendium of every visual decision: grid, palette, typography,
+     logo treatment, down to individual interface and navigation elements.
+     Internal consistency (within the product) and external consistency
+     (with the brand / other products) — p. 143-144. -->
+
+**Consistency rules:**
+- Internal: <different parts of the product reflect the same approach — the rules that make it one cohesive whole> — Why (trace to skeleton): <…>
+- External: <how the product matches the brand / the organization's other products> — Why (trace to strategy §3C brand identity): <…>
+
+**Design comps** (one per key standard screen — the visual analog of its wireframe, p. 148):
+
+**Comp — <screen name>** (repeat this block per key screen)
+- Described comp: <the finished look of this screen, in words>
+- Wireframe mapping (1:1): <each wireframe component → the visual treatment it receives>
+- Why (trace): <…> | Back-loop flag?: <yes/no>
+
+**Style guide** (the compendium — p. 148-151):
+
+| Area | Decision | Why (trace) | Back-loop flag? |
+|---|---|---|---|
+| Color palette | <role, color, usage — colors complement without competing (p. 145-147)> | <traces to brand …> | <yes/no> |
+| Typography | <faces, sizes/weights, usage — simpler ones for body text (p. 147-148)> | <…> | <yes/no> |
+| Grid / spacing | <uniformity standards — consistent element sizes, the grid (p. 139-143)> | <…> | <yes/no> |
+| Logo treatment | <how and where the logo appears> | <…> | <yes/no> |
+| Interface element standards | <buttons, forms, empty states, errors — down to individual elements> | <…> | <yes/no> |
+| Navigation element standards | <nav bars, tabs, breadcrumbs — their visual rules> | <…> | <yes/no> |
 
 ## 4. Rationale & verification
 

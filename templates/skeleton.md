@@ -1,7 +1,9 @@
 # Skeleton — <Product>
 
 <!-- Copy this template to ux/skeleton.md and fill every section in place.
-     Never invent a doc shape: this template IS the structure (contract C-2). -->
+     Never invent a doc shape: this template IS the structure (contract C-2).
+     The book's deliverable for this plane: wireframes over a small set of
+     standard screens (p. 128-130). -->
 
 ## 0. Metadata
 
@@ -40,35 +42,71 @@ None known — starting from scratch
 |---|---|---|---|---|
 | 1 | <issue> | <Critical/High/Medium/Low> | <file:line / screenshot / URL> | <plane it belongs to> |
 
-## 3. Decisions — FUNCTIONALITY side (3A)
+## 3A. Interface Design — FUNCTIONALITY side
 
-<!-- Skeleton 3A = Interface design (AC-010e): interface elements, their
-     arrangement and defaults, and the trade-offs accepted for the user's
-     most likely actions. The 3A section always exists. -->
+<!-- Skeleton 3A = Interface design (AC-010e): selecting the right interface
+     elements and arranging them so they are readily understood and easily
+     used (p. 114-118). Include DEFAULTS: "the interface should be designed
+     so the user's most likely action requires the least effort"
+     (p. 117-118). The 3A section always exists. -->
 
-| Decision | Why (trace to lower plane / convention / assumption) | Back-loop flag? |
-|---|---|---|
-| <interface-design decision / element arrangement / default / trade-off> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
+| Screen | Interface elements & arrangement | Default / most-likely action | Trade-off accepted | Why (trace to structure) | Back-loop flag? |
+|---|---|---|---|---|---|
+| <screen> | <the elements and how they are laid out> | <the least-effort action> | <what was traded, deliberately> | <traces to structure … / assumption A-N> | <yes/no> |
 
-## 3. Decisions — INFORMATION side (3B)
+## 3B. Navigation Design & Information Design — INFORMATION side
 
-<!-- Skeleton 3B = Navigation design (AC-010e): navigation systems and
-     wayfinding; plus information design: how content is grouped and
-     presented, including error messages. The 3B section always exists. -->
+<!-- Skeleton 3B = Navigation design + information design (AC-010e).
+     Navigation: the five systems — global, local, supplementary,
+     contextual, courtesy (p. 120-123) — plus wayfinding: users always know
+     "where they are and where they can go" (p. 127), on every screen,
+     because any page can be an entry point (p. 119-120). Information
+     design: grouping and presentation for effective communication,
+     including error messages and instructional text (p. 124-127). The 3B
+     section always exists (AC-010h). -->
 
-| Decision | Why (trace to lower plane / convention / assumption) | Back-loop flag? |
-|---|---|---|
-| <navigation / wayfinding / information-design decision> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
+**Navigation systems:**
 
-## 3. Decisions — Cross-cutting (3C)
+| System (global / local / supplementary / contextual / courtesy) | Covers | Why (trace) | Back-loop flag? |
+|---|---|---|---|
+| <system> | <what it lets users reach> | <traces to structure … / assumption A-N> | <yes/no> |
 
-<!-- Skeleton 3C = Standard screens + wireframe-level arrangement (AC-010e):
-     the list of standard screens and, per screen, the wireframe-level
-     arrangement of the elements that make it up. -->
+**Wayfinding cues** (on every screen): <color-coding (almost never alone), icons, labels, typography — what tells users where they are and where they can go> — Why (trace): <…>
 
-| Decision | Why (trace to lower plane / convention / assumption) | Back-loop flag? |
-|---|---|---|
-| <standard screen / wireframe-level arrangement> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
+**Information design** (grouping, presentation — p. 124-127):
+
+| Content group | Presentation / emphasis | Why (trace) | Back-loop flag? |
+|---|---|---|---|
+| <what is grouped together> | <how it is arranged and emphasized> | <…> | <yes/no> |
+
+**Error / instructional message composition:** <how messages are composed — plain language, the next step offered>
+
+## 3C. Standard Screens & Wireframes — Cross-cutting
+
+<!-- Skeleton 3C = the plane's deliverable (AC-010e): a small number of
+     standard screens emerges (p. 128-130), each specified as a wireframe —
+     "a bare-bones depiction of all the components of a page and how they
+     fit together," as light as "pencil sketches with sticky notes
+     attached" (p. 128-130). One text wireframe block per standard screen,
+     with behavior notes attached. Deviate from convention only with
+     explicitly defined reasons (p. 111) — the ledger records both. -->
+
+**Standard screens:** <the list — keep it small>
+
+**Wireframe — <screen name>** (repeat this block per standard screen)
+
+```
+<text wireframe: indented/ASCII layout of the elements on this screen>
+```
+
+- Behavior notes: <what each region does, the intended behavior>
+- Why (trace to structure / §3A / §3B): <…> | Back-loop flag?: <yes/no>
+
+**Conventions vs deliberate deviations:**
+
+| Decision | Convention followed / deviation | Reason | Back-loop flag? |
+|---|---|---|---|
+| <element or pattern> | <convention / deviation> | <the explicitly defined reason — deviations need one (p. 111)> | <yes/no> |
 
 ## 4. Rationale & verification
 

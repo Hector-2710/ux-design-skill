@@ -1,7 +1,9 @@
 # Scope — <Product>
 
 <!-- Copy this template to ux/scope.md and fill every section in place.
-     Never invent a doc shape: this template IS the structure (contract C-2). -->
+     Never invent a doc shape: this template IS the structure (contract C-2).
+     The book's deliverables for this plane: functional specifications +
+     content requirements (p. 62-74). -->
 
 ## 0. Metadata
 
@@ -40,36 +42,56 @@ None known — starting from scratch
 |---|---|---|---|---|
 | 1 | <issue> | <Critical/High/Medium/Low> | <file:line / screenshot / URL> | <plane it belongs to> |
 
-## 3. Decisions — FUNCTIONALITY side (3A)
+## 3A. Functional Specifications — FUNCTIONALITY side
 
-<!-- Scope 3A = Functional specifications (AC-010e). Write each spec following
-     the four writing rules: positive, specific, non-subjective (falsifiable),
-     quantitative where possible. Optional feasibility data with no source
-     degrades to a flagged assumption row — the 3A section always exists. -->
+<!-- Scope 3A = Functional specifications (AC-010e): the detailed
+     description of the "feature set" of the product (p. 62). Write every
+     requirement per the book's four rules (p. 70-71): POSITIVE (what the
+     system will do), SPECIFIC (little left to interpretation),
+     NON-SUBJECTIVE (falsifiable), QUANTITATIVE where possible (e.g.,
+     "support at least 1,000 simultaneous users"). Optional feasibility
+     data with no source degrades to a flagged assumption row in §5 — the
+     3A section itself always exists. -->
 
-| Decision | Why (trace to lower plane / convention / assumption) | Back-loop flag? |
+| ID | Requirement (positive, specific, non-subjective, quantitative where possible) | Priority | Why (trace to strategy) | Back-loop flag? |
+|---|---|---|---|---|
+| F-1 | <what the product will do for the user> | <must / should / backlog> | <traces to strategy §3A/§3B … / assumption A-N> | <yes/no> |
+
+## 3B. Content Requirements — INFORMATION side
+
+<!-- Scope 3B = Content requirements (AC-010e): each content element defined
+     by its attributes (p. 71-74) — don't confuse format with purpose (an
+     FAQ is a format for "ready access to commonly needed information").
+     Content inventory (p. 74): for redesigns, enumerate what exists; a
+     partial inventory is allowed and flagged. Unknown owner → flagged
+     assumption row in §5. The section itself always exists (AC-010h). -->
+
+| Content element | Format | Size estimate | Owner | Update frequency | Audience | Why (trace) | Back-loop flag? |
+|---|---|---|---|---|---|---|---|
+| <element, by purpose not just format> | <text / image / audio / video / …> | <word count / pixel dimensions / …> | <who creates and maintains it> | <how often it is updated> | <which segment> | <traces to strategy … / assumption A-N> | <yes/no> |
+
+**Content inventory** (redesign mode; new mode: N/A): `complete` | `partial — assumption A-N` — <what was enumerated, with the completeness marker>
+
+## 3C. Prioritization, Out-of-Scope & Constraints — Cross-cutting
+
+<!-- Scope 3C = the scope boundary (AC-010e). Prioritization weighs each
+     requirement against strategy × feasibility (p. 74-77). Out-of-scope is
+     explicit — knowing what we are NOT building (p. 59-60); the list is
+     never empty. Constraints bind every higher plane (p. 65). -->
+
+**Must-have core** (the requirements that prove the strategy): <F-…, and why these first> — Why (trace): <…>
+
+**Out-of-scope / backlog** (never empty):
+
+| Item | In the backlog because | Revisit when |
 |---|---|---|
-| <functional specification> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
+| <what we are deliberately NOT building, now or ever> | <reason / the strategy served by excluding it> | <trigger to reconsider> |
 
-## 3. Decisions — INFORMATION side (3B)
+**Product-wide constraints:**
 
-<!-- Scope 3B = Content requirements (AC-010e): content types, sizes, ownership,
-     update frequency, and audience. A content inventory with no full data
-     becomes a partial inventory from what the user can enumerate, or a
-     flagged assumption row. The section itself always exists. -->
-
-| Decision | Why (trace to lower plane / convention / assumption) | Back-loop flag? |
-|---|---|---|
-| <content requirement> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
-
-## 3. Decisions — Cross-cutting (3C)
-
-<!-- Scope 3C = Prioritization (strategy + feasibility), explicit
-     out-of-scope/backlog list, and product-wide constraints (AC-010e). -->
-
-| Decision | Why (trace to lower plane / convention / assumption) | Back-loop flag? |
-|---|---|---|
-| <prioritization choice / out-of-scope item / constraint> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
+| Constraint | Type | Why / source | Back-loop flag? |
+|---|---|---|---|
+| <constraint> | <brand / technical / hardware> | <traces to strategy §3C / stated limit> | <yes/no> |
 
 ## 4. Rationale & verification
 

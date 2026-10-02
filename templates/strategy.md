@@ -1,7 +1,10 @@
 # Strategy — <Product>
 
 <!-- Copy this template to ux/strategy.md and fill every section in place.
-     Never invent a doc shape: this template IS the structure (contract C-2). -->
+     Never invent a doc shape: this template IS the structure (contract C-2).
+     The book's deliverable for this plane is the strategy document —
+     product objectives + user needs, kept concise: "bigger is not
+     necessarily better" (p. 36, 53). -->
 
 ## 0. Metadata
 
@@ -40,37 +43,59 @@ None known — starting from scratch
 |---|---|---|---|---|
 | 1 | <issue> | <Critical/High/Medium/Low> | <file:line / screenshot / URL> | <plane it belongs to> |
 
-## 3. Decisions — FUNCTIONALITY side (3A)
+## 3A. Product Objectives — FUNCTIONALITY side
 
-<!-- Strategy 3A = Product objectives (AC-010e): the goals for the product and
-     the conditions we will use to judge success. Fill rows as decided; if an
-     optional item has no data it degrades to an assumption row in §5 — the
-     3A section itself always exists (AC-010h). -->
+<!-- Strategy 3A = Product objectives (AC-010e): what the organization wants
+     to get out of the product (p. 36-38). State each objective WITH its
+     condition for success — the observable state that lets us judge success
+     later, "without defining the path to get there" (p. 38). If an optional
+     item has no data it degrades to an assumption row in §5 — the 3A section
+     itself always exists (AC-010h). -->
 
-| Decision | Why (trace to lower plane / convention / assumption) | Back-loop flag? |
-|---|---|---|
-| <product objective / condition for success> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
+| Objective | Condition for success (no path pre-defined) | Why (trace to brief / convention / assumption) | Back-loop flag? |
+|---|---|---|---|
+| <product objective> | <what must observably be true to call it a success> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
 
-## 3. Decisions — INFORMATION side (3B)
+## 3B. User Needs — INFORMATION side
 
-<!-- Strategy 3B = User needs (AC-010e): segments, personas, and research basis.
-     Optional items (segmentation, personas, user research) follow the
-     substitution ladder: ask → substitute with the user → flagged assumption.
-     The section itself always exists. -->
+<!-- Strategy 3B = User needs (AC-010e): what users want to get out of the
+     product (p. 36). Segments share "key characteristics and, critically,
+     distinct sets of user needs" (p. 42-45); personas may be provisional
+     (built with the user per the substitution ladder) and are then flagged
+     in §5; research with no formal source degrades to a substitute or a
+     flagged assumption. The section itself always exists (AC-010h). -->
 
-| Decision | Why (trace to lower plane / convention / assumption) | Back-loop flag? |
-|---|---|---|
-| <user-need fact or assumption-derived basis> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
+**Segments**
 
-## 3. Decisions — Cross-cutting (3C)
+| Segment | Key characteristics | Distinct needs | Why (trace) | Back-loop flag? |
+|---|---|---|---|---|
+| <segment name> | <who they are> | <needs only this segment has — note opposing needs> | <traces to … / assumption A-N> | <yes/no> |
 
-<!-- Strategy 3C = Brand identity + success metrics (both sides) (AC-010e).
-     Metrics with no tracked data still get candidate metrics tied to stated
-     objectives, or a flagged assumption row. -->
+**Personas** (one block per persona; provisional allowed → flagged in §5)
 
-| Decision | Why (trace to lower plane / convention / assumption) | Back-loop flag? |
-|---|---|---|
-| <brand identity statement / success metric> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
+- **<Persona name>** — <role, one line>
+  - Context: <situation of use>
+  - Goals: <what success looks like for them>
+  - Needs: <what the product must do for them>
+  - Quote: *"<a representative sentence>"*
+  - Basis: `research` | `provisional` (assumption A-N)
+- <repeat per persona>
+
+**User research basis:** <research performed (surveys, interviews, focus groups, contextual inquiry, task analysis, user testing — p. 46-49) | substitute used (server logs, feedback messages, informal testing — p. 157) | assumption A-N if none>
+
+## 3C. Brand Identity & Success Metrics — Cross-cutting
+
+<!-- Strategy 3C = the remaining strategy artifacts (AC-010e). Brand
+     identity: the impression every interaction must leave — "the only
+     choice is whether the impression happens by accident or as a result
+     of conscious choices" (p. 38-39). Success metrics: the finish line for
+     each objective, tracked after launch (p. 39-41). -->
+
+**Brand identity:** <the conceptual associations and emotional reactions the product must create — a conscious choice, not an accident> — Why (trace): <…> | Back-loop flag?: <yes/no>
+
+| Success metric | Tied to objective | Type | Tracked? | Why (trace) | Back-loop flag? |
+|---|---|---|---|---|---|
+| <metric> | <objective it measures> | <usage-based / indirect> | <yes / candidate — assumption A-N> | <traces to …> | <yes/no> |
 
 ## 4. Rationale & verification
 
