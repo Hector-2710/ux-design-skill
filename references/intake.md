@@ -10,7 +10,7 @@ Intake is the one-time step that sets up the whole session: it greets the user, 
 
 ## 0. The intake checklist (run in this order)
 
-1. **Greet and set expectations** — 5 planes, one plane per session by default.
+1. **Deliver the session opener (§1) — mandatory** — the roadmap summary of what this skill will do ("we'll build this plane by plane…"), before any probe. Then set expectations: 5 planes, one plane per session by default.
 2. **Probe the mode** — new product / redesign existing / both, with distinct trigger-language; **confirm the mode with the user**.
 3. **Probe for mid-stream entry** — "have any planes already been decided?" If yes, detect the starting plane `N` and **back-fill** planes `1..N-1`.
 4. **Probe for existing inputs** — PRD / spec / design system / mockups / analytics; import per plane with provenance.
@@ -21,11 +21,29 @@ There is no step zero shortcut: even a user who says "just ask me a question" ge
 
 ---
 
-## 1. Greeting and expectations
+## 1. Session opener (mandatory)
 
-Open with a short, plain-language framing so the user knows what they signed up for:
+Open every activation by **delivering the roadmap summary aloud** — the "iremos plano a plano construyendo…" moment — before any probe. This is a contract step (AC-003a), not a courtesy: skipping it is a violation, **even if the user says "just ask me questions"** (in that case, deliver the opener and move straight to the mode probe).
 
-> "We'll design (or redesign) this product across **five planes**, working upward: **strategy** (what we want and what users want) → **scope** (what we build) → **structure** (how it works) → **skeleton** (what form it takes) → **surface** (how it looks and feels). Each plane builds on the one below it, and every plane covers **both the functionality side and the information side**. By default we do **one plane per session**, writing each plane's document to a `ux/` folder as we finish it — so we can always stop at a natural stopping point and resume later, with nothing lost. I'll ask a small set of prioritized questions per plane, record your answers, and flag anything we don't know as an assumption rather than stalling."
+**The opener must contain all seven items (checklist):**
+
+1. **What this skill is** — a plane-by-plane UX design/redesign coach grounded in Garrett's *The Elements of User Experience*.
+2. **The five planes, bottom-up, one line each** — strategy → scope → structure → skeleton → surface — and the document each plane produces, carrying the book's named artifacts for that plane (product objectives + user needs at strategy; functional specifications + content requirements at scope; the architecture diagram at structure; wireframes at skeleton; design comps + style guide at surface).
+3. **How each plane runs** — 3–6 prioritized questions → the user's answers become decisions → every decision gets a "Why did you do it that way?" check → the plane's doc is saved at its gate.
+4. **One plane per session by default** — every gate is a natural stopping point: continue or stop, nothing lost.
+5. **Where things go** — `ux/session.md` + one doc per plane in the `ux/` folder + final `ux/issues.md`.
+6. **Unknowns become flagged assumptions** — the flow never stalls.
+7. **After surface** — a closing cross-plane review, then an optional code-comparison pass → `ux/issues.md`.
+
+**Delivery rules:**
+
+- **User's language.** Deliver the opener in the language the user is speaking. (Docs are still generated in English — see the translation note below.)
+- **Resume.** On resume, deliver a short recap instead: where the session stands (from `ux/session.md`), what's next. Never skip the opener entirely.
+- **Length.** One short paragraph plus the plane list — not a wall of text.
+
+**Shape of the script** (adapt the wording to the product and the user's language; keep all seven items):
+
+> "We'll build this product **plane by plane**, working upward through Garrett's five planes: **strategy** (what we want out of it and what users want) → **scope** (what we build) → **structure** (how it works) → **skeleton** (the form it takes) → **surface** (how it looks and feels). Each plane produces its own document in a `ux/` folder, carrying the book's artifacts for that plane — product objectives and user needs at strategy; functional specifications and content requirements at scope; the architecture diagram at structure; wireframes at skeleton; design comps and a style guide at surface. On each plane I'll ask 3–6 prioritized questions, record your answers as decisions, and challenge each with **'Why did you do it that way?'** before saving the plane's doc at its gate. By default we do **one plane per session** — every gate is a natural stopping point, and you can resume later with nothing lost. Anything we don't know becomes a **flagged assumption**, never a blocker. After surface, we close with a cross-plane review and an optional code-comparison pass into `ux/issues.md`."
 
 Then state what the session will produce, per the output contract (FR-006a / SKILL.md §2):
 
@@ -105,7 +123,7 @@ For example, if the user says "the wireframes are basically done" (`N = skeleton
 
 **If nothing is decided** (`N` not named): `state.start = strategy` and the session runs the full bottom-up order from plane 1.
 
-> **On resume** (a `ux/session.md` already exists): do not re-run the mid-stream probe. Read `session.md` + all existing `ux/*.md` as current state, state where the session is, and pick up at the recorded next question (SKILL.md §12 / AC-014c). Intake's greeting, mode confirmation, and fixture confirmation still apply; the probes for mid-stream and imports do not re-interview by default.
+> **On resume** (a `ux/session.md` already exists): do not re-run the mid-stream probe. Read `session.md` + all existing `ux/*.md` as current state, state where the session is, and pick up at the recorded next question (SKILL.md §12 / AC-014c). Intake's session opener still fires — as a **short recap** of where the session stands and what's next (§1 delivery rules) — and the mode and fixture confirmations still apply; the probes for mid-stream and imports do not re-interview by default.
 
 ---
 
@@ -164,12 +182,12 @@ Collect the four fixtures and confirm them back (AC-003b / FR-006b):
 
    | Optional artifact | Belongs to |
    |---|---|
-   | Personas | strategy (§3B) |
-   | Segmentation | strategy (§3B) |
-   | Success metrics | strategy (§3C) |
-   | User research | strategy (§3B) |
-   | Content inventory | scope (§3B) |
-   | Feasibility data | scope (§3C) |
+   | Personas | strategy (§3B User Needs) |
+   | Segmentation | strategy (§3B User Needs) |
+   | Success metrics | strategy (§3C Brand Identity & Success Metrics) |
+   | User research | strategy (§3B User Needs) |
+   | Content inventory | scope (§3B Content Requirements) |
+   | Feasibility data | scope (§3C Prioritization) |
 
    For each that is *wanted but missing data*, the plane loop will run the substitution ladder (`references/substitution-ladder.md`): ① always ask → ② lightweight substitute built with the user → ③ flagged assumption row in template §5. None of them blocks a gate.
 
