@@ -4,7 +4,7 @@
 
 **Plane's new question (AC-008g):** **"How is it going to work?"** (p. 81). *How do we know that?* "On the structure plane, we must identify how the product will work — the way the parts of the product fit together and behave" (p. 81). We "define how the pieces of the product fit together and behave… and how the product will respond to the user" (p. 81-82, "architecture").
 
-**Required artifacts:** `ux/structure.md` per `templates/structure.md` — interaction design incl. conceptual models + error-handling strategy (3A), information architecture incl. vocabulary/metadata (3B), high-level flow + structure type (3C).
+**Required artifacts:** `ux/structure.md` per `templates/structure.md` — §3A **Interaction Design** (conceptual model block + system-response table + error-handling ladder), §3B **Information Architecture** (nodes, structure type, organizing principles, controlled vocabulary & metadata), §3C **Architecture Diagram (text form) & Key Flows**.
 
 **Book grounding:** Jesse James Garrett, *The Elements of User Experience* 2nd ed., **Chapter 5** (p. 79-101). Page anchors: structure question (p. 81); interaction design — "the way the system responds to the user, and the way the user responds to the system" (p. 82-83); conceptual models (p. 83-84); error handling ladder *prevention → correction → recovery* (p. 86-88); IA nodes + structure types (hierarchy/matrix/organic/sequential) (p. 92-95); organizing principles (p. 96-98); controlled vocabulary + metadata (p. 98-101); the "architecture" of the high-level flow (p. 101).
 
@@ -31,42 +31,42 @@ What "done" looks like on this plane (quoted):
 - **Why this?** Interaction design is "the way the system responds to the user, and the way the user responds to the system" (p. 81-82); the response includes the *options* offered, repeatable *patterns*, and the order/sequence of steps (p. 82). The most important interaction decisions shape everything above.
 - **New-mode:** "We're new — when a user does X, what should the product do?"
 - **Redesign-mode:** "How does the current product respond today — and where do those responses not match the strategy?"
-- **Feeds:** template §3A (interaction design).
+- **Feeds:** template §3A **Interaction Design** (system-response table).
 
 ### CORE-2 — Conceptual model
 - **Phrasing:** "What conceptual model are we using — what do we want users to *believe* about how this works?"
 - **Why this?** "We can base our conceptual model on conventions the user is already familiar with" (p. 84); keep consistency "within the design" (p. 83). "People don't need to understand how the product works internally — only that it behaves the way they expect" (p. 83). An inconsistent or exotic model makes users guess.
 - **New-mode:** "We're new — what real-world or familiar model should users rely on to predict us?"
 - **Redesign-mode:** "What model does the current product implicitly use — and is that model carrying the right meaning?"
-- **Feeds:** template §3A (conceptual model row).
+- **Feeds:** template §3A **Interaction Design** (conceptual model block).
 
 ### CORE-3 — Error-handling strategy
 - **Phrasing:** "When something goes wrong, how do we prevent, correct, and recover — in that order?"
 - **Why this?** The book's ladder: "the best error message is the one that never appears"; prevent where possible, then "guide the user" to correct, then "how the user can recover" (p. 86-88). Error handling is a structure-plane decision with a clear ladder — prevention, not blame.
 - **New-mode:** "We're new — which user errors can we prevent outright, and where must we design correction/recovery?"
 - **Redesign-mode:** "Where does the current product fail to prevent, correct, or recover — and which failure causes the most damage?"
-- **Feeds:** template §3A (error-handling strategy) + verification gate.
+- **Feeds:** template §3A **Interaction Design** (error-handling ladder table) + verification gate.
 
 ### CORE-4 — Information architecture / nodes
 - **Phrasing:** "How is content organized — what nodes exist, what structure type, and by what organizing principles?"
 - **Why this?** IA "focuses on how the content… is organized" (p. 90); we define "the nodes," the structure type — hierarchy, matrix, organic, or sequential (p. 92-95) — and the "organizing principles" that "govern the arrangement of nodes" (p. 96-98). Users rely on this to find content; a bad IA hides everything.
 - **New-mode:** "We're new — what are the top-level categories, and what principle orders them?"
 - **Redesign-mode:** "What organizing principles does the current product actually use — even by accident — and which contradict each other?"
-- **Feeds:** template §3B (IA).
+- **Feeds:** template §3B **Information Architecture** (nodes, structure type, organizing principles).
 
 ### CORE-5 — Vocabulary & metadata
 - **Phrasing:** "What vocabulary will the product use, consistently — and what metadata does the content need?"
 - **Why this?** "A controlled vocabulary… ensures users and the system agree on terms" (p. 98); metadata "describes the content" to support retrieval and consistency (p. 100-101). Terminology consistency is a structure-plane decision that later planes must honor.
 - **New-mode:** "We're new — what are the canonical names for our concepts, and what fields describe each content item?"
 - **Redesign-mode:** "What overlapping terms does the current product use for the same thing — and which name wins?"
-- **Feeds:** template §3B (vocabulary + metadata).
+- **Feeds:** template §3B **Information Architecture** (controlled vocabulary & metadata table).
 
 ### CORE-6 — High-level flow / architecture
 - **Phrasing:** "What is the overall pattern of how the product fits together — its architecture at a glance?"
 - **Why this?** Structure is where we see "how the product will work as a whole" — the high-level flow and architecture tie the pieces together (p. 101). Capture the architecture as a flow, not a pile of screens.
 - **New-mode:** "We're new — sketch the main path a user takes end to end."
 - **Redesign-mode:** "What is the current end-to-end flow, and where does it no longer serve the structure we want?"
-- **Feeds:** template §3C (flow/architecture).
+- **Feeds:** template §3C **Architecture Diagram (text form) & Key Flows**.
 
 ---
 
@@ -102,9 +102,9 @@ _Anything skipped or substituted is recorded as an assumption in §5 of the temp
 
 Feeds template **§3** (duality enforced structurally — AC-010e):
 
-- **3A — FUNCTIONALITY side:** **Interaction design** — system response, options, patterns, sequences, conceptual model, error-handling ladder (p. 81-88).
-- **3B — INFORMATION side:** **Information architecture** — nodes, structure type, organizing principles (p. 92-98); **vocabulary + metadata** (p. 98-101). Never blank (AC-010h).
-- **3C — Cross-cutting:** **High-level flow / architecture** tying both sides into one whole (p. 101).
+- **3A — Interaction Design (FUNCTIONALITY side):** system response, options, patterns, sequences, conceptual model, error-handling ladder (p. 81-88).
+- **3B — Information Architecture (INFORMATION side):** nodes, structure type, organizing principles (p. 92-98); controlled vocabulary + metadata (p. 98-101). Never blank (AC-010h).
+- **3C — Architecture Diagram (text form) & Key Flows (Cross-cutting):** the plane's major documentation tool (p. 101), tying both sides into one whole.
 
 ---
 
@@ -129,5 +129,5 @@ Per-plane minimums (FR-013b structure / AC-013b) — gate **Pass**/**Pass-with-b
 - **Information architecture** non-blank: nodes + structure type + **organizing principles** (p. 92-98) — the information side is never empty (AC-010e/h).
 - **Vocabulary/metadata** captured or flagged (p. 98-101).
 - **High-level flow/architecture** sketched (p. 101).
-- Every §3 decision has a non-empty "Why"; §1 never blank.
+- Template §1, §3A (Interaction Design), §3B (Information Architecture), §3C (Architecture Diagram & Key Flows), §5 all non-empty; every §3 decision has a non-empty "Why."
 - Sweep verdict = Pass or Pass-with-backlogs (never Blocked) — `references/verification-sweep.md`.

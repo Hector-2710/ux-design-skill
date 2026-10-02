@@ -10,9 +10,9 @@
 
 ## Part 1 — Intake (SKILL.md §4 / `references/intake.md`)
 
-**AGENT:** Hi — I'm your UX design coach, and I'll take this in five planes, working bottom-up: strategy, scope, structure, skeleton, and surface. Each plane gets a short set of prioritized questions, and we write one document per plane into a `ux/` folder as we finish it. By default we do one plane per session — every plane is a natural stopping point and you can resume later with nothing lost.
+**AGENT:** Hi — I'm your UX design coach, grounded in Garrett's *Elements of User Experience*. We'll build this product **plane by plane**, working upward: **strategy** (what we want out of it and what users want) → **scope** (what we build) → **structure** (how it works) → **skeleton** (the form it takes) → **surface** (how it looks and feels). Each plane produces its own document in a `ux/` folder, carrying the book's artifacts for that plane — product objectives and user needs at strategy; functional specifications and content requirements at scope; the architecture diagram at structure; wireframes at skeleton; design comps and a style guide at surface. On each plane I'll ask 3–6 prioritized questions, record your answers as decisions, and challenge each with "Why did you do it that way?" before saving the plane's doc at its gate. By default we do **one plane per session** — every gate is a natural stopping point, and you can resume later with nothing lost. Anything we don't know becomes a **flagged assumption**, never a blocker. After surface, we close with a cross-plane review and an optional code-comparison pass into `ux/issues.md`.
 
-@ *Greeting first: five planes named, one-plane-per-session default, output folder mentioned. No design question is asked yet (AC-003).*
+@ *Session opener delivered first (mandatory): what the skill is, the five planes bottom-up with their artifacts, how each plane runs, one-plane-per-session, where things go, assumptions-not-blockers, the closing review. No design question is asked yet (AC-003).*
 
 **AGENT:** To start, which of these is your situation? — (a) **New product**: it doesn't exist yet and we design it from scratch; (b) **Redesign existing**: the product exists and we improve the experience users have today; (c) **Both**: an existing product being rebuilt so much that the target looks like a new one.
 
@@ -82,7 +82,7 @@
 
 **USER:** Calm, homey, competent. Like a quiet assistant that has dinner handled — not another app demanding attention.
 
-**AGENT:** That's the six. I've recorded every answer into `ux/strategy.md` — objectives and conditions go into §3A (FUNCTIONALITY side), user needs and segments into §3B (INFORMATION side), brand + metrics into §3C (Cross-cutting). Each decision row carries a "Why" that traces back to what you just said.
+**AGENT:** That's the six. I've recorded every answer into `ux/strategy.md` — objectives and their conditions for success go into §3A (**Product Objectives**), user needs and segments into §3B (**User Needs** — Lena will get a persona block later), brand + metrics into §3C (**Brand Identity & Success Metrics**). Each decision row carries a "Why" that traces back to what you just said.
 
 ---
 
@@ -100,15 +100,15 @@
 
 **USER:** Exactly. That's the primary audience.
 
-**AGENT — record as substitute + flag:** The persona row goes into §3B as a decision with basis "provisional persona from stated audience." Because there's no formal research behind it, it also becomes an assumption row in §5 with the record text `No formal research; provisional persona based on stated audience`.
+**AGENT — record as substitute + flag:** The persona block goes into §3B (**User Needs**) as a decision with basis "provisional persona from stated audience." Because there's no formal research behind it, it also becomes an assumption row in §5 with the record text `No formal research; provisional persona based on stated audience`.
 
-**AGENT — metrics, ① ask then ② substitute:** Same conversation for success metrics — you named weekly planners and week-2 retention, which are usage-based and tied to the objectives, plus we can add indirect ones like support volume ("how do I invite my spouse?" tickets). I'll record them in §3C as **candidate metrics** and flag them: `Metrics proposed from objectives; not yet tracked`.
+**AGENT — metrics, ① ask then ② substitute:** Same conversation for success metrics — you named weekly planners and week-2 retention, which are usage-based and tied to the objectives, plus we can add indirect ones like support volume ("how do I invite my spouse?" tickets). I'll record them in §3C (**Brand Identity & Success Metrics**) as **candidate metrics** and flag them: `Metrics proposed from objectives; not yet tracked`.
 
 **USER:** Perfect. Indirect metrics — yes, support volume tells us where planning breaks.
 
 **AGENT — ③ flag:** And user research has no formal source today, so the §5 registers `No research performed; evidence base is anecdotal`, with "how to validate": run lightweight research from server logs and feedback before the scope plane commits details.
 
-@ *The substitution ladder always terminates: every wanted-and-missing item degrades to a flagged assumption row (with a how-to-validate), and no section disappeared — §3B persona-row, §3C metrics-row, and §5 assumption rows all exist.*
+@ *The substitution ladder always terminates: every wanted-and-missing item degrades to a flagged assumption row (with a how-to-validate), and no section disappeared — §3B persona block, §3C metrics row, and §5 assumption rows all exist.*
 
 ---
 
@@ -120,11 +120,11 @@
 
 **USER:** I'll try.
 
-**AGENT:** Check one — take the §3A decision "weekly-planning habit is the primary objective." Why that way?
+**AGENT:** Check one — take the §3A (**Product Objectives**) decision "weekly-planning habit is the primary objective." Why that way?
 
 **USER:** Because every other plane will trace back to it — if scope asks which features first, it's the ones that keep people planning weekly.
 
-**AGENT — acceptable class (a), traces to lower-plane/strategy:** Which is exactly the honest reason: it's the foundation the later planes trace to. Next, the §3B segment decision — "beginners and practical parents need different things."
+**AGENT — acceptable class (a), traces to lower-plane/strategy:** Which is exactly the honest reason: it's the foundation the later planes trace to. Next, the §3B (**User Needs**) segment decision — "beginners and practical parents need different things."
 
 **USER:** Choice is section 4 of our segment probe — deliberate: they genuinely have opposing needs, and we'd rather serve the practical majority and design the beginner path separately than gray everyone together.
 
@@ -142,13 +142,13 @@
 
 **USER:** Strategy *is* the bottom plane here. Nothing below.
 
-**AGENT:** Correct — nothing to contradict. Check five — duality: are **both** §3A and §3B non-empty and consistent?
+**AGENT:** Correct — nothing to contradict. Check five — duality: are **both** §3A (**Product Objectives**) and §3B (**User Needs**) non-empty and consistent?
 
-**USER:** §3A has objectives and conditions; §3B has user needs, segments, and the persona row. They line up.
+**USER:** §3A has objectives and conditions; §3B has user needs, segments, and the persona block. They line up.
 
 **AGENT — check six, verdict, written to §4:** They do. Verdict: **Pass-with-backlogs** — checks clear, one upward-ripple item queued for the closing review. I'm writing that verdict into §4 of `ux/strategy.md`, listing which decisions were challenge-checked and their answer classes.
 
-**AGENT — gate minimums, strategy (FR-013b):** the strategy gate minimums are met: conditions for success stated without the path; user needs captured for the primary audience; metrics defined-or-flagged; the doc is concise, not padded. The generic gate also holds — §1, §3A, §3B, §3C, §5 all non-empty, every "Why" filled.
+**AGENT — gate minimums, strategy (FR-013b):** the strategy gate minimums are met: product objectives with conditions for success stated without the path; user needs captured for the primary audience; brand identity and metrics defined-or-flagged; the doc is concise, not padded. The generic gate also holds — §1, §3A (Product Objectives), §3B (User Needs), §3C (Brand Identity & Success Metrics), §5 all non-empty, every "Why" filled.
 
 **AGENT — gate write + session state:** `ux/strategy.md` is written and marked `gate-passed`. `ux/session.md` updated: strategy `gate-passed`, next plane scope, mode `new`.
 
@@ -189,7 +189,7 @@
 | Moment | Where it happened in the transcript | Reference / SKILL.md |
 |---|---|---|
 | Intake (mode, mid-stream, import, fixtures, session.md) | Part 1 | `references/intake.md`; SKILL.md §4 |
-| Plane loop: load bank + template, import, ask cores core-first, record to §3A/§3B/§3C | Part 2 | SKILL.md §6; `references/planes/strategy-questions.md` |
+| Plane loop: load bank + template, import, ask cores core-first, record to the plane's named artifact sections (§3A/§3B/§3C) | Part 2 | SKILL.md §6; `references/planes/strategy-questions.md` |
 | Substitution (ask → substitute with the user → flagged assumption) | Part 3 | `references/substitution-ladder.md`; SKILL.md §8 |
 | Verification sweep (six checks → verdict → §4) | Part 4 | `references/verification-sweep.md`; SKILL.md §10 |
 | Gate minimums + gate write + natural stopping point | Part 4 | `references/planes/strategy-questions.md` GATE; SKILL.md §5, §11 |

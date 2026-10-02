@@ -36,6 +36,22 @@ Every plane splits down the middle: on the **functionality side** the product is
 
 ---
 
+## 1.5 Artifacts per plane — what each plane's doc must contain
+
+The book frames every plane as *producing* named artifacts. Each `ux/<plane>.md` carries these artifacts, **by name**, as its §3 sections (see `templates/`):
+
+| Plane | FUNCTIONALITY artifact | INFORMATION artifact | Plane deliverable(s) (book term) | Template sections | Pages |
+|---|---|---|---|---|---|
+| Strategy | Product objectives | User needs | Strategy document — kept concise | §3A Product Objectives · §3B User Needs (segments, personas, research) · §3C Brand Identity & Success Metrics | p. 36-53 |
+| Scope | Functional specifications | Content requirements | Functional specifications + content requirements (+ content inventory) | §3A Functional Specifications · §3B Content Requirements · §3C Prioritization, Out-of-Scope & Constraints | p. 59-77 |
+| Structure | Interaction design | Information architecture | Architecture diagram | §3A Interaction Design (conceptual model, error ladder) · §3B Information Architecture (nodes, principles, vocabulary) · §3C Architecture Diagram (text form) & Key Flows | p. 81-101 |
+| Skeleton | Interface design | Navigation design + information design | Wireframes over standard screens | §3A Interface Design · §3B Navigation & Information Design · §3C Standard Screens & Wireframes | p. 108-130 |
+| Surface | Sensory design (functionality) | Sensory design (information) | Design comps + style guide | §3A Visual Design — functionality · §3B Visual Design — information · §3C Design Comps & Style Guide | p. 133-151 |
+
+**Deliverable-language anchors:** strategy → the strategy document, "bigger is not necessarily better" (p. 53); scope → functional specifications (p. 62) and content requirements (p. 71); structure → "the major documentation tool … is the diagram" (p. 101); skeleton → "the wireframe is a bare-bones depiction … of all the components" (p. 128-130); surface → the design comp (p. 148) and the style guide (p. 148-151).
+
+---
+
 ## 2. Strategy concepts (Chapter 3)
 
 | Concept | One-line definition | Page |

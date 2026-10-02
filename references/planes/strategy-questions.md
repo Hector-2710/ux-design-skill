@@ -4,7 +4,7 @@
 
 **Plane's new question (AC-008g):** **"What do we want to get out of this product — and what do our users want to get out of it?"** (p. 36). *How do we know that?* "Clearly defining the conditions for success… assures that we don't get ahead of ourselves" (p. 38); success metrics give the finish line (p. 39); "What do we want to get out of this product? What do our users want to get out of it?" (p. 36).
 
-**Required artifacts:** `ux/strategy.md` per `templates/strategy.md` — product objectives (3A), user needs incl. user research/hypotheses (3B), brand identity + success metrics (3C).
+**Required artifacts:** `ux/strategy.md` per `templates/strategy.md` — §3A **Product Objectives** (each objective with its condition for success), §3B **User Needs** (segments table + persona blocks + research basis), §3C **Brand Identity & Success Metrics** (brand statement + metrics table).
 
 **Book grounding:** Jesse James Garrett, *The Elements of User Experience* 2nd ed., **Chapter 3** (p. 35-54). Page anchors: two strategy questions (p. 36); objectives + brand identity (p. 38-39); conditions for success (p. 38); success metrics (p. 39-41); segmentation ↔ opposing needs (p. 42-45); user research methods (p. 46-49); personas (p. 49-51); strategy doc — concise, "bigger is not necessarily better" (p. 53).
 
@@ -32,42 +32,42 @@ What "done" looks like on this plane (quoted):
 - **Why this?** Objectives are "the foundation of a clearly articulated strategy"; the most common reason a site fails is that "nobody bothered to answer two very basic questions: What do we want to get out of this product? What do our users want to get out of it?" (p. 36). Everything above traces to this decision.
 - **New-mode:** "We're starting from scratch — what is this product for, in your own words?"
 - **Redesign-mode:** "What are the current product objectives — as stated anywhere (brief, PRD, yearly goals) — and what is this redesign actually trying to get out of the product?"
-- **Feeds:** template §3A (product objectives); flagged as assumption A-1 if none known.
+- **Feeds:** template §3A **Product Objectives** (objective + condition-for-success columns); flagged as assumption A-1 if none known.
 
 ### CORE-2 — User needs
 - **Phrasing:** "What do our users want to get out of this product?"
 - **Why this?** "User needs… impose the strategic objective from outside the organization" (p. 36). Without needs, later planes build on guesses; with the dual split, strategy must answer both sides (p. 27-28).
 - **New-mode:** "We're starting fresh — what do you believe your users want from a product like this?"
 - **Redesign-mode:** "What do current users get out of the existing product today, and which of those needs are being met well / poorly?"
-- **Feeds:** template §3B (user needs); assume→flagged if no data (substitution ladder).
+- **Feeds:** template §3B **User Needs** (distinct-needs column); assume→flagged if no data (substitution ladder).
 
 ### CORE-3 — Conditions for success (without the path)
 - **Phrasing:** "What are the conditions for success for this product — what has to be true for us to call it successful? (Not *how* we get there.)"
 - **Why this?** "Conditions for success outlined in a positive, specific, and non-subjective way, and without pre-defining the path to get there, keeps a project from leaping ahead to defining solutions too early" (p. 38). It is the book's discipline: state the target, not the means.
 - **New-mode:** "Conditions for success, stated freely — no path yet."
 - **Redesign-mode:** "What were the conditions for success of the existing product, and are they still the conditions for this redesign?"
-- **Feeds:** template §3A (trace to objectives) + §5 flagged condition if the user jumps to solutions.
+- **Feeds:** template §3A **Product Objectives** (condition-for-success column) + §5 flagged condition if the user jumps to solutions.
 
 ### CORE-4 — Users / segments
 - **Phrasing:** "Who are our users — and which segments of users share distinct sets of needs?"
 - **Why this?** "User segmentation… divides the audience into segments that share key characteristics and, critically, distinct sets of user needs" (p. 42). "You really only need as many different segments as you have different sets of user needs" (p. 45). Opposing segments force explicit focus choices, not silence.
 - **New-mode:** "Who is this product for; do different groups need different things from it?"
 - **Redesign-mode:** "Who uses the current product today; which groups have opposing needs that the current state fails?"
-- **Feeds:** template §3B (user needs → segments) + optional personas/segmentation substitute rows.
+- **Feeds:** template §3B **User Needs** (segments table) + optional persona blocks / segmentation substitute rows.
 
 ### CORE-5 — Success metrics
 - **Phrasing:** "How will we know when we've reached our objectives — what will we track?"
 - **Why this?** Success metrics tell us "whether we've met our objectives" after launch (p. 39). Metrics "must be tied to the objectives" — "races have finish lines." Without metrics, strategy cannot be verified at any gate (FR-013).
 - **New-mode:** "What data would prove this works, once launched — what would you watch?"
 - **Redesign-mode:** "What does the current product track, and do those metrics match the current objectives?"
-- **Feeds:** template §3C (success metrics); candidate metrics → flagged if not yet tracked.
+- **Feeds:** template §3C **Brand Identity & Success Metrics** (metrics table); candidate metrics → flagged if not yet tracked.
 
 ### CORE-6 — Brand identity
 - **Phrasing:** "What brand impression must every interaction leave — what do we want the product to feel like?"
 - **Why this?** "Brand identity, the set of conceptual associations and emotional reactions… every product creates one whether we plan for it or not — the only choice is whether by accident or by conscious intent" (p. 38-39). Deciding it deliberately at strategy lets the surface plane express it consistently.
 - **New-mode:** "We're new — what impression should this product leave on everyone who touches it?"
 - **Redesign-mode:** "What impression does the current product leave, and how does that match the brand we intend?"
-- **Feeds:** template §3C (brand identity) → style guide/brand at the surface plane.
+- **Feeds:** template §3C **Brand Identity & Success Metrics** (brand identity block) → style guide/brand at the surface plane.
 
 ---
 
@@ -102,9 +102,9 @@ Applies to this plane: **personas, segmentation, success metrics, user research*
 
 Feeds template **§3** (duality enforced by structure — AC-010e):
 
-- **3A — FUNCTIONALITY side:** **Product objectives** — what the product must accomplish for the organization (p. 36-38); conditions for success stated without the path (p. 38).
-- **3B — INFORMATION side:** **User needs** — what users want to get out of it, segmentation, user-research basis (p. 36, 42-49); never blank; degrades to a flagged assumption (AC-010g).
-- **3C — Cross-cutting:** **Brand identity** (p. 38-39) + **success metrics** (p. 39-41) — both sides in one cross-plane row.
+- **3A — Product Objectives (FUNCTIONALITY side):** what the product must accomplish for the organization (p. 36-38); conditions for success stated without the path (p. 38).
+- **3B — User Needs (INFORMATION side):** what users want to get out of it — segments, personas, user-research basis (p. 36, 42-49); never blank; degrades to a flagged assumption (AC-010g).
+- **3C — Brand Identity & Success Metrics (Cross-cutting):** the conscious impression every interaction must leave (p. 38-39) + the finish line for each objective (p. 39-41).
 
 ---
 
@@ -128,5 +128,5 @@ Per-plane minimums (FR-013b / AC-013b strategy) — gate **Pass**/**Pass-with-ba
 - **User needs** captured for at least the primary audience (p. 36, 45).
 - **Success metrics** defined **or flagged** (p. 39).
 - **Prune, not pad** — strategy doc stays concise; "bigger is not necessarily better" (p. 53).
-- Template §1, §3A, §3B, §3C, §5 all non-empty; every §3 decision has a non-empty "Why."
+- Template §1, §3A (Product Objectives), §3B (User Needs), §3C (Brand Identity & Success Metrics), §5 all non-empty; every §3 decision has a non-empty "Why."
 - Sweep verdict = Pass or Pass-with-backlogs (never Blocked) — `references/verification-sweep.md`.

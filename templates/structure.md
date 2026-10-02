@@ -1,7 +1,10 @@
 # Structure — <Product>
 
 <!-- Copy this template to ux/structure.md and fill every section in place.
-     Never invent a doc shape: this template IS the structure (contract C-2). -->
+     Never invent a doc shape: this template IS the structure (contract C-2).
+     The book's deliverable for this plane: the architecture diagram —
+     "the major documentation tool" of this plane, expressed here in text
+     form (p. 101). -->
 
 ## 0. Metadata
 
@@ -40,36 +43,77 @@ None known — starting from scratch
 |---|---|---|---|---|
 | 1 | <issue> | <Critical/High/Medium/Low> | <file:line / screenshot / URL> | <plane it belongs to> |
 
-## 3. Decisions — FUNCTIONALITY side (3A)
+## 3A. Interaction Design — FUNCTIONALITY side
 
-<!-- Structure 3A = Interaction design (AC-010e): the conceptual model and the
-     error-handling ladder (prevention → correction → recovery). The
-     architecture/flow diagram is expressed as text in 3C. The 3A section
-     always exists. -->
+<!-- Structure 3A = Interaction design (AC-010e): "the way the system
+     responds to the user, and the way the user responds to the system"
+     (p. 81-82). Two named artifacts: the conceptual model (p. 83-84) and
+     the error-handling ladder (p. 86-88) — prevention first ("the best
+     error message is the one that never appears"), then correction, then
+     recovery. The 3A section always exists. -->
 
-| Decision | Why (trace to lower plane / convention / assumption) | Back-loop flag? |
-|---|---|---|
-| <interaction-design decision / conceptual model / error-handling rung> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
+**Conceptual model:** <what users should believe about how the product works — "a thing the user consumes, a place the user visits, or an object the user acquires" (p. 83)>
+- Basis: <familiar convention the model is built on / deliberate deviation + why> — Why (trace): <…> | Back-loop flag?: <yes/no>
 
-## 3. Decisions — INFORMATION side (3B)
+**System response** (options, patterns, sequences of actions — p. 81-82):
 
-<!-- Structure 3B = Information architecture (AC-010e): nodes, structure type
-     (hierarchy / matrix / organic / sequential), organizing principles, and
-     controlled vocabulary / metadata. The 3B section always exists. -->
+| Interaction | Options / patterns offered | Sequence | Why (trace to scope) | Back-loop flag? |
+|---|---|---|---|---|
+| <user action or task> | <how the system accommodates it> | <order of steps> | <traces to scope … / assumption A-N> | <yes/no> |
 
-| Decision | Why (trace to lower plane / convention / assumption) | Back-loop flag? |
-|---|---|---|
-| <IA decision / structure type / organizing principle / vocabulary term> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
+**Error-handling ladder** (prevention → correction → recovery — p. 86-88):
 
-## 3. Decisions — Cross-cutting (3C)
+| Error risk | Prevention | Correction | Recovery | Why (trace) | Back-loop flag? |
+|---|---|---|---|---|---|
+| <what can go wrong> | <design so it is impossible, then merely difficult> | <guide the user to figure out and fix it> | <undo / restore> | <traces to … / assumption A-N> | <yes/no> |
 
-<!-- Structure 3C = Architecture/flow in text form (AC-010e): describe the
-     high-level user flow and system architecture sequentially, since the
-     book's diagram is expressed as a described flow in this doc. -->
+## 3B. Information Architecture — INFORMATION side
 
-| Decision | Why (trace to lower plane / convention / assumption) | Back-loop flag? |
-|---|---|---|
-| <architecture / flow step> | <traces to … / chosen convention because … / assumption A-N> | <yes/no> |
+<!-- Structure 3B = Information architecture (AC-010e): how content is
+     organized (p. 90-101). Nodes are "any piece or group of information"
+     (p. 92); structure types: hierarchy / matrix / organic / sequential
+     (p. 92-95); organizing principles "govern the arrangement of nodes"
+     (p. 96-98); a controlled vocabulary keeps internal jargon off the
+     surface, and metadata is "information about information" (p. 98-101).
+     The 3B section always exists (AC-010h). -->
+
+**Nodes:** <the major nodes — content units and their granularity>
+
+**Structure type:** `hierarchy` | `matrix` | `organic` | `sequential` — Why (trace): <…> | Back-loop flag?: <yes/no>
+
+**Organizing principles:**
+
+| Principle | Groups together | Why (trace to strategy) | Back-loop flag? |
+|---|---|---|---|
+| <criterion> | <which nodes> | <traces to objectives/needs … / assumption A-N> | <yes/no> |
+
+**Controlled vocabulary & metadata:**
+
+| Canonical term | Avoid / alias | Why (trace) | Metadata fields (if any) | Back-loop flag? |
+|---|---|---|---|---|
+| <term users understand> | <jargon / synonyms it replaces> | <…> | <"information about information" the node carries> | <yes/no> |
+
+## 3C. Architecture Diagram (text form) & Key Flows — Cross-cutting
+
+<!-- Structure 3C = the plane's major documentation tool, the diagram
+     (p. 101), expressed as a text/indented outline plus the key user
+     flows, stepwise. This is the artifact the higher planes will read. -->
+
+```
+<text architecture diagram — indented outline of the structure, e.g.:>
+Home
+├── My Week
+│   ├── Plan
+│   └── Shopping list
+└── My Recipes
+    ├── Add
+    └── Browse
+```
+
+**Key flows** (stepwise):
+
+1. <flow name>: <step 1> → <step 2> → <step 3> — Why (trace): <…> | Back-loop flag?: <yes/no>
+2. <repeat per key flow>
 
 ## 4. Rationale & verification
 

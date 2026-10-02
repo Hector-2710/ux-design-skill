@@ -4,7 +4,7 @@
 
 **Plane's new question (AC-008g):** **"How does it look?"** (p. 133). *How do we know that?* "On the surface plane we are finally concerned with… the actual appearance of the product" (p. 133): the sensory design of content, functionality, and brand that the user perceives.
 
-**Required artifacts:** `ux/surface.md` per `templates/surface.md` — sensory design for functionality (3A), sensory design for information (3B), visual design comps/style guide (3C).
+**Required artifacts:** `ux/surface.md` per `templates/surface.md` — §3A **Visual Design — Functionality side** (eye path, contrast & emphasis), §3B **Visual Design — Information side** (readability/presentation), §3C **Design Comps & Style Guide** (consistency rules, palette/typography, comps with 1:1 wireframe mapping, style guide).
 
 **Book grounding:** Jesse James Garrett, *The Elements of User Experience* 2nd ed., **Chapter 7** (p. 133-151). Page anchors: look question (p. 133); **eye path** — "where does the eye go first" and the flow across the screen (p. 137-139); **contrast + uniformity** (p. 139-143); internal/external consistency + brand (p. 143-144); **color palette + typography** (p. 145-148); style guide (p. 148-151).
 
@@ -31,35 +31,35 @@ What "done" looks like on this plane (quoted):
 - **Why this?** "Where does the eye go first?" is the surface plane's central sensory question (p. 137); "the eye travels a path" defined by arrangement and emphasis (p. 137-139). Design the path deliberately or the eye wanders.
 - **New-mode:** "We're new — what should users see first, and then in what order?"
 - **Redesign-mode:** "Where does the current eye actually land first — and does that match intent?"
-- **Feeds:** template §3A (sensory design for functionality).
+- **Feeds:** template §3A **Visual Design — Functionality side** (eye path table).
 
 ### CORE-2 — Contrast & emphasis
 - **Phrasing:** "How do we use contrast so the important things stand out — and uniformity so the rest stays calm?"
 - **Why this?** "Contrast" draws the eye to what matters; "uniformity" keeps everything else from competing (p. 139-143). Both, not one. Signals which surface elements are primary vs secondary.
 - **New-mode:** "We're new — what is the primary visual emphasis on each screen?"
 - **Redesign-mode:** "Does anything currently shout that shouldn't — or hide that should stand out?"
-- **Feeds:** template §3A (sensory design for functionality).
+- **Feeds:** template §3A **Visual Design — Functionality side** (contrast & emphasis table).
 
 ### CORE-3 — Consistency & brand
 - **Phrasing:** "How consistent are we — internally and with our brand — and what impression does that leave?"
 - **Why this?** Internal consistency binds the product together; external consistency ties it to the brand and other products users already know (p. 143-144). The surface expresses the strategy's brand identity (p. 38-39).
 - **New-mode:** "We're new — what brand impression should every screen consistently reinforce?"
 - **Redesign-mode:** "What brand impression does the current surface accidentally leave?"
-- **Feeds:** template §3C (style guide + brand).
+- **Feeds:** template §3C **Design Comps & Style Guide** (consistency rules).
 
 ### CORE-4 — Palette & typography
 - **Phrasing:** "What color palette and typography do we choose — and why these?"
 - **Why this?** Color and type are the surface's most visible decisions (p. 145-148) — chosen deliberately to serve readability and brand, not as default decoration.
 - **New-mode:** "We're new — pick a palette and type system, with a rationale."
 - **Redesign-mode:** "What palette/type does the current product use, and what would better serve readability and brand?"
-- **Feeds:** template §3C (style guide).
+- **Feeds:** template §3C **Design Comps & Style Guide** (style guide: palette & typography rows).
 
 ### CORE-5 — Style guide coverage
 - **Phrasing:** "What belongs in our style guide — from palette and type to grid, logo, and components?"
 - **Why this?** "A style guide is a compendium of all the visual decisions," from "color palettes and typography" to "logo treatment" (p. 148); it keeps the surface consistent without re-deciding every screen (p. 148-151).
 - **New-mode:** "We're new — what are the first five things our style guide must pin down?"
 - **Redesign-mode:** "What visual rules exist today, and what's missing from them?"
-- **Feeds:** template §3C (style guide).
+- **Feeds:** template §3C **Design Comps & Style Guide** (style guide: coverage).
 
 ### CORE-6 — Clarify vs undermine lower planes
 - **Phrasing:** "Does this surface design clarify the skeleton, structure, scope, and strategy — or undermine them?"
@@ -102,9 +102,9 @@ _Anything skipped or substituted is recorded as an assumption in §5 of the temp
 
 Feeds template **§3** (duality enforced structurally — AC-010e):
 
-- **3A — FUNCTIONALITY side:** **Sensory design for functionality** — eye path, contrast/emphasis on controls and action elements (p. 137-143).
-- **3B — INFORMATION side:** **Sensory design for information** — how content is visually presented for readability (p. 137-143, 145-148). Never blank (AC-010h).
-- **3C — Cross-cutting:** **Consistency + brand + style guide** (p. 143-151).
+- **3A — Visual Design, Functionality side:** eye path, contrast/emphasis on controls and action elements (p. 137-143).
+- **3B — Visual Design, Information side:** how content is visually presented for readability (p. 137-143, 145-148). Never blank (AC-010h).
+- **3C — Design Comps & Style Guide (Cross-cutting):** internal/external consistency + brand (p. 143-144), the design comps (p. 148), and the style guide (p. 148-151).
 
 ---
 
@@ -130,5 +130,5 @@ Per-plane minimums (FR-013b surface / AC-013b) — gate **Pass**/**Pass-with-bac
 - **Palette & typography** chosen deliberately (p. 145-148).
 - **Style guide contents** defined or flagged (p. 148-151).
 - **No downward contradiction** — every surface choice either clarifies or flags a lower-plane conflict (AC-013e); contradictions go to the back-loop, not the gate.
-- Every §3 decision has a non-empty "Why"; §1 never blank.
+- Template §1, §3A (Visual Design — functionality), §3B (Visual Design — information), §3C (Design Comps & Style Guide), §5 all non-empty; every §3 decision has a non-empty "Why."
 - Sweep verdict = Pass or Pass-with-backlogs (never Blocked) — `references/verification-sweep.md`.
